@@ -1,0 +1,16 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# Reference clone of the original Lovable project (not part of this app)
+/repo/
+
+# Local editor / harness config
+.vscode/*
+!.vscode/extensions.json
+.idea
+.claude/

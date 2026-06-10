@@ -1,0 +1,141 @@
+/* Fonts are loaded via <link> tags in index.html for non-blocking rendering */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 95%;
+    --foreground: 20 10% 20%;
+
+    --card: 36 33% 92%;
+    --card-foreground: 20 10% 20%;
+
+    --popover: 36 33% 95%;
+    --popover-foreground: 20 10% 20%;
+
+    --primary: 5 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 36 40% 88%;
+    --secondary-foreground: 20 10% 20%;
+
+    --muted: 36 25% 90%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 36 60% 70%;
+    --accent-foreground: 20 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 80%;
+    --input: 30 20% 80%;
+    --ring: 5 70% 50%;
+
+    --radius: 0.75rem;
+
+    --craft-green: 145 50% 40%;
+    --craft-green-foreground: 0 0% 100%;
+    --craft-orange: 25 90% 55%;
+    --craft-orange-foreground: 0 0% 100%;
+    --craft-cream: 40 40% 96%;
+    --craft-cream-dark: 36 30% 88%;
+    --craft-brown: 25 30% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-body font-bold;
+  }
+}
+
+/* Craft-themed paper utilities (dashed/dotted borders, cut lines, texture) */
+@layer utilities {
+  .border-craft-dashed {
+    border: 2px dashed hsl(var(--border));
+  }
+  .border-craft-dotted {
+    border: 2px dotted hsl(var(--border));
+  }
+  .border-craft-dashed-primary {
+    border: 2px dashed hsl(var(--primary));
+  }
+
+  .cut-line {
+    background-image: repeating-linear-gradient(
+      90deg,
+      hsl(var(--muted-foreground)) 0,
+      hsl(var(--muted-foreground)) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 2px;
+  }
+  .scissors-line {
+    position: relative;
+  }
+  .scissors-line::before {
+    content: "✂";
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .paper-texture {
+    background-image:
+      radial-gradient(circle at 20% 80%, hsl(36 33% 93% / 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(36 33% 90% / 0.3) 0%, transparent 50%);
+  }
+
+  /* Hide the scrollbar on horizontal swipe rows while keeping scroll behaviour. */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Primary call-to-action button with the "paper cut-out" look */
+@layer components {
+  .btn-cta-green {
+    @apply relative box-border inline-block w-full rounded-xl text-center font-semibold text-white transition-all;
+    background-color: #1aad50;
+    font-size: 1rem;
+    padding: 1.2rem 5px;
+    box-shadow: 0 6px 0 #246b41;
+  }
+  .btn-cta-green:hover {
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 #246b41;
+  }
+  .btn-cta-green::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 2px dashed hsla(0, 0%, 100%, 0.45);
+    border-radius: 0.4rem;
+    pointer-events: none;
+  }
+}
