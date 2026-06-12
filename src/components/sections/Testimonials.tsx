@@ -38,14 +38,14 @@ const Testimonials = () => {
         <h2 className="mb-2 text-[35px] font-bold leading-[1.2] text-foreground">
           Quem monta,<span className="text-craft-orange">se apaixona!</span>
         </h2>
-        <p className="mb-10 text-muted-foreground">
+        <p className="mb-2 text-muted-foreground">
           Alguns relatos de quem já comprou e aprovou a Coleção
         </p>
 
         {/* Coverflow carousel */}
         <div className="relative mx-auto max-w-md">
           <div
-            className="relative h-[500px] touch-pan-y select-none overflow-hidden"
+            className="relative h-[460px] touch-pan-y select-none overflow-hidden sm:h-[490px]"
             onPointerDown={onPointerDown}
             onPointerUp={onPointerUp}
           >
