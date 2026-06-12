@@ -9,6 +9,9 @@ dist-ssr
 # Reference clone of the original Lovable project (not part of this app)
 /repo/
 
+# Backup of the original full-resolution images (kept locally only)
+/image-backup/
+
 # Local editor / harness config
 .vscode/*
 !.vscode/extensions.json

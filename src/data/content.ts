@@ -6,6 +6,10 @@ import benefitImage2 from "@/assets/benefit-2.jpg";
 import benefitImage3 from "@/assets/benefit-3.jpg";
 import benefitImage4 from "@/assets/benefit-4.jpg";
 import bonusMotosImage from "@/assets/bonus-motos.png";
+import testimonialShot1 from "@/assets/depoimento-1.png";
+import testimonialShot2 from "@/assets/depoimento-2.png";
+import testimonialShot3 from "@/assets/depoimento-3.png";
+import testimonialShot4 from "@/assets/depoimento-4.png";
 
 /**
  * Single source of truth for every piece of copy, price, image and checkout
@@ -14,9 +18,9 @@ import bonusMotosImage from "@/assets/bonus-motos.png";
 
 /** Checkout / payment links. Swap these when the offer or platform changes. */
 export const checkoutLinks = {
-  master: "https://checkout.pagamentseg.shop/VCCL1O8SCSAK",
-  upsellMaster: "https://checkout.pagamentseg.shop/VCCL1O8SCSAJ",
-  upsellBasic: "https://checkout.pagamentseg.shop/VCCL1O8SCSAI",
+  master: "https://ggcheckout.app/checkout/v5/ln3lfTp9i5sWyPz55zHx",
+  upsellMaster: "https://ggcheckout.app/checkout/v5/Vp9C0Itwf2SzfygDyCVw",
+  upsellBasic: "https://ggcheckout.app/checkout/v5/pquoPNmTIbbIxMZI1ule",
 } as const;
 
 export const hero = {
@@ -143,32 +147,12 @@ export const steps: Step[] = [
   },
 ];
 
-export interface Testimonial {
-  name: string;
-  role: string;
-  text: string;
-  avatar: string;
-}
-
-export const testimonials: Testimonial[] = [
-  {
-    name: "Ricardo Almeida",
-    role: "Pai de 1",
-    text: "Comprei pro meu filho e foi a melhor coisa, a gente montou juntos um mustang 62 e ele ficou perfeito, nem parece ser de papel rsrs",
-    avatar: "https://i.imgur.com/vBhMX0V.jpeg",
-  },
-  {
-    name: "Clara Antunes",
-    role: "Professora",
-    text: "Uso com meus alunos e eles amam. Ajudou muito na coordenação motora e ainda estimula criatividade e paciência deles",
-    avatar: "https://mundocolagem.omnieducacao.com/_astro/person4.IJ_OvZE2_Z231mRK.webp",
-  },
-  {
-    name: "Felipe Martins",
-    role: "Gamer",
-    text: "Comprei pra mim mesmo e to apaixonado nos modelos, ficam perfeitos parecendo até carrinhos comprados, tanto que coloquei alguns no meu setup",
-    avatar: "https://i.imgur.com/zxBC0TG.jpeg",
-  },
+/** Screenshots of real WhatsApp conversations, shown in the coverflow carousel. */
+export const testimonialShots: string[] = [
+  testimonialShot1,
+  testimonialShot2,
+  testimonialShot3,
+  testimonialShot4,
 ];
 
 export interface Bonus {
