@@ -19,7 +19,7 @@ import testimonialShot4 from "@/assets/depoimento-4.png";
 /** Checkout / payment links. Swap these when the offer or platform changes. */
 export const checkoutLinks = {
   master: "https://ggcheckout.app/checkout/v5/ln3lfTp9i5sWyPz55zHx",
-  upsellMaster: "https://ggcheckout.app/checkout/v5/Vp9C0Itwf2SzfygDyCVw",
+  upsellMaster: "https://ggcheckout.app/checkout/v5/o36TYBUmj85YS22szpKB",
   upsellBasic: "https://ggcheckout.app/checkout/v5/pquoPNmTIbbIxMZI1ule",
 } as const;
 
