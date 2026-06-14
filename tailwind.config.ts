@@ -13,7 +13,6 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Caveat", "cursive"],
         body: ["Inter", "sans-serif"],
       },
       colors: {
